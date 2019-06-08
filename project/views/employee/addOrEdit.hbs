@@ -1,0 +1,33 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/employee" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{employee._id}}">
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="fullName" placeholder="ชื่อ-นามสกุล"
+            value="{{employee.fullName}}">
+        <div class="text-danger">
+            {{employee.fullNameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" name="email" placeholder="อีเมล" value="{{employee.email}}">
+        <div class="text-danger">
+            {{employee.emailError}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Mobile</label>
+            <input type="text" class="form-control" name="mobile" placeholder="เบอร์โทรศัพท์"
+                value="{{employee.mobile}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Province</label>
+            <input type="text" class="form-control" name="city" placeholder="จังหวัด" value="{{employee.city}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-dark" href="/employee/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>
